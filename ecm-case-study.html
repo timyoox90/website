@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECM Banker Journey — Tim Yoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1B2A4A;
+    --navy-mid: #2E4270;
+    --navy-light: #E8EDF5;
+    --navy-pale: #F4F6FA;
+    --ink: #141414;
+    --ink-mid: #3A3A3A;
+    --ink-soft: #5A5A5A;
+    --ink-faint: #A8A8A8;
+    --rule: #E2E2E2;
+    --white: #FFFFFF;
+    --accent: #C8A96E;
+    --accent-light: #F9F3E8;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 860px;
+    --pad: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.93); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 var(--pad); height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--navy); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .nav-back:hover { color: var(--navy); }
+
+  /* HERO */
+  .hero {
+    padding-top: 56px;
+    background: var(--navy);
+    padding-bottom: 0;
+  }
+  .hero-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 4rem var(--pad) 3rem;
+  }
+  .hero-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-tag {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(200,169,110,0.4); padding: 3px 10px; border-radius: 3px;
+  }
+  .hero-num { font-size: 0.72rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+  .hero-title {
+    font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--white); line-height: 1.1; margin-bottom: 1.25rem;
+  }
+  .hero-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+  .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 620px; margin-bottom: 3rem; }
+
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem; gap: 0;
+  }
+  .hstat {
+    padding: 0 1.5rem 1.5rem 0;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .hstat:last-child { border-right: none; padding-right: 0; }
+  .hstat:not(:first-child) { padding-left: 1.5rem; }
+  .hstat-val { font-family: var(--serif); font-size: 1.6rem; color: var(--white); margin-bottom: 0.25rem; line-height: 1; }
+  .hstat-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.4; }
+
+  /* MAIN CONTENT */
+  .content { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* SECTION BLOCKS */
+  .section { padding: 4rem 0; border-bottom: 1px solid var(--rule); }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: var(--serif); font-size: 1.65rem; color: var(--navy);
+    line-height: 1.2; margin-bottom: 1.25rem;
+  }
+  .body-text { font-size: 0.97rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; }
+  .body-text + .body-text { margin-top: 1rem; }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--navy-pale); border-left: 3px solid var(--navy);
+    padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; margin: 2rem 0;
+  }
+  .callout-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .callout p { font-size: 0.92rem; font-weight: 300; color: var(--ink-mid); line-height: 1.7; }
+
+  /* QUOTE */
+  .quote-block {
+    padding: 2.5rem 0; text-align: center;
+  }
+  .quote-mark { font-family: var(--serif); font-size: 4rem; color: var(--navy-light); line-height: 0.5; display: block; margin-bottom: 1rem; }
+  .quote-text {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--navy); line-height: 1.55; max-width: 640px; margin: 0 auto 1rem;
+  }
+  .quote-attr { font-size: 0.78rem; color: var(--ink-faint); letter-spacing: 0.06em; }
+
+  /* PROCESS TIMELINE */
+  .process-phases {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 0; margin: 2rem 0;
+    border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+  }
+  .phase {
+    padding: 1.25rem 1rem; border-right: 1px solid var(--rule);
+    position: relative;
+  }
+  .phase:last-child { border-right: none; }
+  .phase-num { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.4rem; }
+  .phase-name { font-size: 0.82rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.3; }
+  .phase-jobs { list-style: none; }
+  .phase-jobs li { font-size: 0.72rem; color: var(--ink-soft); line-height: 1.5; padding: 2px 0; border-top: 1px solid var(--rule); }
+  .phase-jobs li:first-child { border-top: none; }
+  .phase.highlight { background: var(--navy); }
+  .phase.highlight .phase-num { color: rgba(255,255,255,0.35); }
+  .phase.highlight .phase-name { color: var(--white); }
+  .phase.highlight .phase-jobs li { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.1); }
+  .phase.highlight::after {
+    content: 'Primary Focus';
+    position: absolute; top: -1px; right: -1px;
+    font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
+    background: var(--accent); color: var(--navy);
+    padding: 2px 7px; border-radius: 0 0 0 4px; font-weight: 500;
+  }
+
+  /* RESEARCH APPROACH */
+  .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .approach-card {
+    border: 1px solid var(--rule); border-radius: 8px; padding: 1.25rem;
+  }
+  .approach-card-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
+  .approach-card-title { font-size: 0.85rem; font-weight: 500; color: var(--navy); margin-bottom: 0.4rem; }
+  .approach-card-body { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.6; font-weight: 300; }
+
+  /* FINDING THEMES */
+  .themes { display: flex; flex-direction: column; gap: 1px; margin: 2rem 0; }
+  .theme {
+    display: grid; grid-template-columns: 180px 1fr;
+    border: 1px solid var(--rule); border-radius: 0; overflow: hidden;
+  }
+  .theme:first-child { border-radius: 8px 8px 0 0; }
+  .theme:last-child { border-radius: 0 0 8px 8px; }
+  .theme-label {
+    background: var(--navy-pale); padding: 1.25rem 1rem;
+    display: flex; flex-direction: column; justify-content: center;
+    border-right: 1px solid var(--rule);
+  }
+  .theme-name { font-size: 0.85rem; font-weight: 500; color: var(--navy); }
+  .theme-badge {
+    display: inline-block; margin-top: 0.3rem;
+    font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 3px;
+  }
+  .badge-primary { background: var(--navy); color: white; }
+  .badge-secondary { background: var(--navy-light); color: var(--navy); }
+  .theme-content { padding: 1.25rem; }
+  .theme-finding { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.65; font-weight: 300; }
+  .theme-quote {
+    margin-top: 0.75rem; padding: 0.75rem 1rem;
+    background: var(--accent-light); border-left: 2px solid var(--accent);
+    font-style: italic; font-size: 0.8rem; color: var(--ink-mid); line-height: 1.6;
+  }
+
+  /* METHODOLOGY TIMELINE */
+  .timeline { position: relative; margin: 2rem 0; padding-left: 1.5rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--rule);
+  }
+  .timeline-item { position: relative; margin-bottom: 1.75rem; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: -1.5rem; top: 5px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--white); border: 2px solid var(--navy);
+  }
+  .timeline-dot.active { background: var(--navy); }
+  .timeline-when { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem; }
+  .timeline-title { font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem; }
+  .timeline-body { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.65; font-weight: 300; }
+
+  /* IMPACT */
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .impact-card {
+    background: var(--navy-pale); border-radius: 8px; padding: 1.25rem;
+  }
+  .impact-card-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5rem; }
+  .impact-card-text { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.6; font-weight: 400; }
+
+  /* OKRs */
+  .okr-block {
+    background: var(--navy); border-radius: 10px; padding: 2rem; margin: 2rem 0;
+  }
+  .okr-objective { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+  .okr-statement { font-family: var(--serif); font-size: 1.2rem; color: var(--white); line-height: 1.45; margin-bottom: 1.5rem; }
+  .okr-outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .okr-outcome {
+    background: rgba(255,255,255,0.07); border-radius: 6px; padding: 0.9rem 1rem;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .okr-outcome-label { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.3rem; }
+  .okr-outcome-text { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.5; font-weight: 300; }
+
+  /* LESSONS */
+  .lessons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .lesson { border-top: 2px solid var(--navy); padding-top: 0.75rem; }
+  .lesson-text { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.65; font-weight: 300; }
+
+  /* BOTTOM NAV */
+  .bottom-nav {
+    background: var(--navy-pale); border-top: 1px solid var(--rule);
+    padding: 3rem var(--pad); display: flex; justify-content: space-between; align-items: center;
+  }
+  .bnav-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.3rem; }
+  .bnav-link { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); text-decoration: none; }
+  .bnav-link:hover { text-decoration: underline; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 700px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .hstat { border-right: none; padding: 0; }
+    .process-phases { grid-template-columns: 1fr; }
+    .phase { border-right: none; border-bottom: 1px solid var(--rule); }
+    .approach-grid, .impact-grid, .okr-outcomes, .lessons { grid-template-columns: 1fr; }
+    .theme { grid-template-columns: 1fr; }
+    .theme-label { border-right: none; border-bottom: 1px solid var(--rule); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Tim Yoo</a>
+  <a href="index.html" class="nav-back">← All work</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span class="hero-tag">Case Study</span>
+      <span class="hero-num">JPMorgan Chase · 2025</span>
+    </div>
+    <h1 class="hero-title">Mapping the IPO Journey<br><em>End to End</em></h1>
+    <p class="hero-sub">ECM bankers orchestrate some of the most complex, high-stakes transactions in global finance — yet the institutional knowledge governing how deals actually get done lived almost entirely in people's heads. This research set out to surface, document, and map the full lifecycle of an equity capital markets deal, from prospect identification to post-deal close, and in doing so, laid the foundation for a new product and research strategy across JPMorgan's entire Investment Banking group.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-val">2 × 2hr</div>
+        <div class="hstat-label">In-person executive focus groups</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">5</div>
+        <div class="hstat-label">ECM bankers: 3 MDs, 1 ED, 1 VP</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">8wks</div>
+        <div class="hstat-label">Pre-work to final presentation</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">5</div>
+        <div class="hstat-label">Core finding themes identified</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="section reveal">
+    <p class="section-label">The Challenge</p>
+    <h2 class="section-title">Walking into a room where everyone knows more than you</h2>
+    <p class="body-text">Equity capital markets banking is a world with its own language. Terms like bookbuild, working party list, and follow-on offering are shorthand for processes that take years to learn. The bankers I needed to research — Managing Directors who had spent decades executing IPOs — had no patience for someone who didn't understand what they did. If I walked in cold, I'd get polite non-answers and a wasted hour.</p>
+    <p class="body-text">The product and technology teams supporting these bankers were in a similar position: building tools against assumptions, not evidence. The ECM deal lifecycle — from identifying a prospective issuer to post-deal close — had never been formally documented at JPMorgan. Everyone did it differently. No one had ever been asked to explain it end-to-end.</p>
+    <p class="body-text">My mandate was to change that: surface, document, and map the full lifecycle of an ECM deal — in enough depth to drive real product decisions, and with enough credibility to land with the most senior people in the building.</p>
+
+    <div class="callout">
+      <p class="callout-label">Business Mission</p>
+      <p>Expand JPMorgan's global equity capital markets wallet share to be consistently recognized as the #1 bank across all capital markets products — through longer relationships, best-in-class advice, and operational efficiency across one Capital Markets team.</p>
+    </div>
+  </div>
+
+  <!-- PROCESS MAP -->
+  <div class="section reveal">
+    <p class="section-label">The ECM Deal Lifecycle</p>
+    <h2 class="section-title">Eight phases, hundreds of decisions</h2>
+    <p class="body-text">The pre-work produced a draft lifecycle map spanning all eight phases of an equity capital markets deal — from initial prospecting through post-deal close. This document had never existed at JPMorgan. Bringing it into the focus groups shifted the dynamic immediately: bankers weren't being asked to explain their world from scratch. They were being asked to correct ours. They did — and in doing so, surfaced the detail and nuance that no amount of desk research could have produced alone.</p>
+
+    <div class="process-phases">
+      <div class="phase highlight">
+        <p class="phase-num">Phase 1–2</p>
+        <p class="phase-name">Prospecting & Relationship Building</p>
+        <ul class="phase-jobs">
+          <li>Monitor TAM & company space</li>
+          <li>Identify key decision makers</li>
+          <li>Draw engagement plans</li>
+          <li>Track engagement catalysts</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <p class="phase-num">Phase 3</p>
+        <p class="phase-name">Deal Origination</p>
+        <ul class="phase-jobs">
+          <li>Engage client stakeholders</li>
+          <li>Proactive outreach with ideas</li>
+          <li>Chase meetings</li>
+          <li>Define next steps</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <p class="phase-num">Phase 4</p>
+        <p class="phase-name">Deal Prep & Marketing</p>
+        <ul class="phase-jobs">
+          <li>Prepare pitch deck</li>
+          <li>Define equity story</li>
+          <li>Syndication process</li>
+          <li>Working Party List</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <p class="phase-num">Phase 5</p>
+        <p class="phase-name">Launch & Bookbuild</p>
+        <ul class="phase-jobs">
+          <li>Investor targeting</li>
+          <li>Roadshow management</li>
+          <li>Shareholder updates</li>
+          <li>Compliance controls</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <p class="phase-num">Phase 6</p>
+        <p class="phase-name">Post-Deal Closing</p>
+        <ul class="phase-jobs">
+          <li>Aftermarket tracking</li>
+          <li>Deal announcement</li>
+          <li>Post-mortem</li>
+          <li>Case study generation</li>
+        </ul>
+      </div>
+    </div>
+    
+<div class="viz-wrap">
+  <p class="viz-label">ECM Deal Lifecycle — Journey Map</p>
+  <div style="overflow-x:auto;">
+  <div style="min-width:700px; border:1px solid var(--rule); border-radius:10px; overflow:hidden;">
+    <!-- Header row -->
+    <div style="display:grid; grid-template-columns:repeat(8,1fr); background:var(--navy);">
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Prospecting</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Relationship</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Origination</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Engagement Mgmt</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Client Advisory</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Deal Prep</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-right:1px solid rgba(255,255,255,0.1);">Launch & Build</div>
+      <div style="padding:0.7rem 0.6rem; font-size:0.62rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.9);">Post-Deal</div>
+    </div>
+    <!-- JTBD row -->
+    <div style="display:grid; grid-template-columns:repeat(8,1fr); background:var(--navy-pale); border-bottom:1px solid var(--rule);">
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Monitor TAM & company space</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Draw engagement plan & track catalysts</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Proactive outreach with ideas</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Regular touchpoints, log interactions</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Define equity story & positioning</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Pitch deck, fee proposal, WPL</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); border-right:1px solid var(--rule); line-height:1.4;">Roadshow, book build, pricing</div>
+      <div style="padding:0.6rem; font-size:0.7rem; color:var(--ink-soft); line-height:1.4;">Aftermarket, case study, post-mortem</div>
+    </div>
+    <!-- Pain level row -->
+    <div style="display:grid; grid-template-columns:repeat(8,1fr); border-bottom:1px solid var(--rule);">
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#FEF2F2;">
+        <div style="height:28px; background:#E24B4A; border-radius:3px; opacity:0.85; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#A32D2D; font-weight:500; text-align:center;">HIGH PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#FEF2F2;">
+        <div style="height:28px; background:#E24B4A; border-radius:3px; opacity:0.75; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#A32D2D; font-weight:500; text-align:center;">HIGH PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#FFFBEB;">
+        <div style="height:18px; background:#EF9F27; border-radius:3px; opacity:0.8; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#854F0B; font-weight:500; text-align:center;">MED PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#FFFBEB;">
+        <div style="height:18px; background:#EF9F27; border-radius:3px; opacity:0.7; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#854F0B; font-weight:500; text-align:center;">MED PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#F0FDF4;">
+        <div style="height:10px; background:#639922; border-radius:3px; opacity:0.7; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#3B6D11; font-weight:500; text-align:center;">LOW PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#F0FDF4;">
+        <div style="height:10px; background:#639922; border-radius:3px; opacity:0.65; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#3B6D11; font-weight:500; text-align:center;">LOW PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:#F0FDF4;">
+        <div style="height:10px; background:#639922; border-radius:3px; opacity:0.6; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#3B6D11; font-weight:500; text-align:center;">LOW PAIN</div>
+      </div>
+      <div style="padding:0.5rem 0.6rem; background:#F0FDF4;">
+        <div style="height:8px; background:#639922; border-radius:3px; opacity:0.5; margin-bottom:0.3rem;"></div>
+        <div style="font-size:0.6rem; color:#3B6D11; font-weight:500; text-align:center;">LOW PAIN</div>
+      </div>
+    </div>
+    <!-- Focus badge -->
+    <div style="display:grid; grid-template-columns:repeat(8,1fr);">
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:var(--navy); text-align:center;">
+        <span style="font-size:0.6rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent);">★ Focus</span>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule); background:var(--navy); text-align:center;">
+        <span style="font-size:0.6rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent);">★ Focus</span>
+      </div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule);"></div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule);"></div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule);"></div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule);"></div>
+      <div style="padding:0.5rem 0.6rem; border-right:1px solid var(--rule);"></div>
+      <div style="padding:0.5rem 0.6rem;"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+    <p class="body-text" style="font-size:0.82rem; color: var(--ink-faint); margin-top: 0.5rem;">* Prospecting & Relationship Building identified as primary focus area for product investment based on value unlock potential and strategic alignment.</p>
+  </div>
+
+  <!-- FINDINGS -->
+  <div class="section reveal">
+    <p class="section-label">Key Findings</p>
+    <h2 class="section-title">Five themes across the deal lifecycle</h2>
+    <p class="body-text">The synthesis surfaced five recurring problem themes — each crossing multiple phases of the equity capital markets lifecycle. The first three (Visibility, Accountability, Actionability) represented the most acute pain and the clearest opportunity for product intervention.</p>
+
+    <div class="themes">
+      <div class="theme">
+        <div class="theme-label">
+          <p class="theme-name">Visibility</p>
+          <span class="theme-badge badge-primary">Major</span>
+        </div>
+        <div class="theme-content">
+          <p class="theme-finding">ECM bankers were consistently brought into relationships too late — after coverage had already developed rapport with a potential issuer. Valuable client intelligence (lending data, private banking relationships, existing JPM exposure) was siloed, unstructured, or simply unavailable. By the time ECM arrived, the pitch was underdeveloped and the relationship underbaked.</p>
+          <div class="theme-quote">"I'll get info from someone in Tennessee that is a middle market banker that has a client that wants to see if it makes sense for them to go public... how did it get to this size and how are we just being made aware? ...oh wow, this is a really sizable business. It wasn't on anyone's radar."</div>
+        </div>
+      </div>
+      <div class="theme">
+        <div class="theme-label">
+          <p class="theme-name">Accountability</p>
+          <span class="theme-badge badge-primary">Major</span>
+        </div>
+        <div class="theme-content">
+          <p class="theme-finding">Both Coverage and ECM bankers shared responsibility for client engagement — which in practice meant no one truly owned it. Engagement plans were drafted manually in emails, never formalized in a central system, and rarely followed up on. Prospects were discussed in monthly calls, noted with enthusiasm, and then forgotten.</p>
+          <div class="theme-quote">"Behavior wise, where we fail is we have these monthly target calls where we discuss 100 situations and there's only 1 follow-up which we engage on. It's a great name; we should follow-up — then nothing happens."</div>
+        </div>
+      </div>
+      <div class="theme">
+        <div class="theme-label">
+          <p class="theme-name">Actionability</p>
+          <span class="theme-badge badge-primary">Major</span>
+        </div>
+        <div class="theme-content">
+          <p class="theme-finding">Opportunity tracking was done primarily for reporting purposes — it captured status, not next steps. Automated alerting had become too noisy to be useful; bankers had learned to ignore it. There were no standardized checklists, no assigned owners per action, no mechanism to enforce follow-through. Notes described situations; they never prescribed what to do about them.</p>
+          <div class="theme-quote">"No one has ever asked: 'Has this thing been actioned?' Notes are a situation description, not an actual action plan or name against it."</div>
+        </div>
+      </div>
+      <div class="theme">
+        <div class="theme-label">
+          <p class="theme-name">Knowledge Sharing</p>
+          <span class="theme-badge badge-secondary">Supporting</span>
+        </div>
+        <div class="theme-content">
+          <p class="theme-finding">Institutional knowledge — deal history, client context, comparable transactions, relationship intelligence — was locked in individuals rather than systems. When senior bankers rotated or left, that knowledge walked out with them. New team members had no reliable onramp to the context they needed to contribute quickly.</p>
+        </div>
+      </div>
+      <div class="theme">
+        <div class="theme-label">
+          <p class="theme-name">Efficiency</p>
+          <span class="theme-badge badge-secondary">Supporting</span>
+        </div>
+        <div class="theme-content">
+          <p class="theme-finding">Manual, repetitive data tasks consumed meaningful banker time — pulling from Pitchbook, FactSet, and other sources; collating investor lists; building marketing materials by hand. Many of these tasks could be partially automated or at minimum standardized. Every hour spent on data assembly was an hour not spent on client relationships or deal strategy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRATEGIC DIRECTION -->
+  <div class="section reveal">
+    <p class="section-label">Strategic Direction</p>
+    <h2 class="section-title">Prospecting as the highest-value unlock</h2>
+    <p class="body-text">Of the eight lifecycle phases, Prospecting and Relationship Building emerged as the clear priority for product investment. The rationale was two-fold: it represented the greatest concentration of unaddressed pain, and it was the phase most directly aligned with the bank's strategic goal of expanding ECM wallet share through longer, deeper client relationships.</p>
+    <p class="body-text">The research informed a proposed workflow spanning four capability areas: consolidated prospecting alerts with structured visibility, clear ownership assignment with shared accountability, AI-assisted suggested next actions to drive opportunity progress, and real-time data hydration to improve forecasting and planning.</p>
+
+    <div class="okr-block">
+      <p class="okr-objective">Proposed Objective</p>
+      <p class="okr-statement">Empower bankers to discover, act on, and convert potential ECM issuers — including non-JPM clients</p>
+      <div class="okr-outcomes">
+        <div class="okr-outcome">
+          <p class="okr-outcome-label">Outcome 1</p>
+          <p class="okr-outcome-text">Uncover new, previously overlooked prospective deals through improved signal-to-noise in alerting</p>
+        </div>
+        <div class="okr-outcome">
+          <p class="okr-outcome-label">Outcome 2</p>
+          <p class="okr-outcome-text">Expand overall deal pipeline with higher-quality early-stage opportunities identified each quarter</p>
+        </div>
+        <div class="okr-outcome">
+          <p class="okr-outcome-label">Outcome 3</p>
+          <p class="okr-outcome-text">Improved visibility and collaboration across teams on early-stage opportunities</p>
+        </div>
+        <div class="okr-outcome">
+          <p class="okr-outcome-label">Outcome 4</p>
+          <p class="okr-outcome-text">Clearer ownership and follow-through on identified prospects with tangible next steps mapped</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPACT -->
+  
+<div class="viz-wrap" style="margin-top:2.5rem;">
+  <p class="viz-label">Proposed Workflow — Four Capability Areas</p>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border-radius:10px; overflow:hidden;">
+    <div style="background:var(--white); padding:1.25rem;">
+      <div style="width:32px; height:32px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:0.75rem;">
+        <span style="font-size:0.72rem; font-weight:500; color:white;">01</span>
+      </div>
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy); margin-bottom:0.35rem;">Prospecting Visibility</div>
+      <div style="font-size:0.78rem; color:var(--ink-soft); line-height:1.6; font-weight:300;">Consolidated view of prospecting alerts from CRM, AI, and screener sources — with Yes/No assessment for initial prioritization</div>
+    </div>
+    <div style="background:var(--white); padding:1.25rem;">
+      <div style="width:32px; height:32px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:0.75rem;">
+        <span style="font-size:0.72rem; font-weight:500; color:white;">02</span>
+      </div>
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy); margin-bottom:0.35rem;">Opportunity Tracking</div>
+      <div style="font-size:0.78rem; color:var(--ink-soft); line-height:1.6; font-weight:300;">Assign clear ownership and shared visibility to each opportunity — tracking from prospect identification through to deal execution</div>
+    </div>
+    <div style="background:var(--white); padding:1.25rem;">
+      <div style="width:32px; height:32px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:0.75rem;">
+        <span style="font-size:0.72rem; font-weight:500; color:white;">03</span>
+      </div>
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy); margin-bottom:0.35rem;">Actionable Intelligence</div>
+      <div style="font-size:0.78rem; color:var(--ink-soft); line-height:1.6; font-weight:300;">AI-suggested next actions that encourage opportunity progress — moving from passive notes to active, assigned task plans</div>
+    </div>
+    <div style="background:var(--white); padding:1.25rem;">
+      <div style="width:32px; height:32px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:0.75rem;">
+        <span style="font-size:0.72rem; font-weight:500; color:white;">04</span>
+      </div>
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy); margin-bottom:0.35rem;">Data Continuity</div>
+      <div style="font-size:0.78rem; color:var(--ink-soft); line-height:1.6; font-weight:300;">Capture proprietary knowledge for market intelligence — hydrating reporting dashboards in real time for better forecasting</div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="section reveal">
+    <p class="section-label">Impact</p>
+    <h2 class="section-title">Back to the business mission</h2>
+    <p class="body-text">JPMorgan's goal was to be the #1 equity capital markets bank — through longer relationships, better intelligence, and faster action on opportunities. This research gave the product and strategy teams their first evidence-based picture of where that mission was being undermined: deals missed because ECM came in too late, opportunities lost because no one owned the follow-through, and institutional knowledge that walked out the door when bankers left.</p>
+    <p class="body-text">The findings didn't just inform a product roadmap. They created a shared language across research, product, technology, and leadership for what needed to change — and why.</p>
+
+    <div class="callout" style="margin: 1.75rem 0;">
+      <p class="callout-label">Executive Audience</p>
+      <p>Findings were presented to the #3 product executive at JPMorgan — reporting directly to Jamie Dimon — making this among the most senior research presentations in the firm's digital banking organization. That presentation became the catalyst for six downstream initiatives and directly shaped Global Investment Banking platform strategy.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <p class="impact-card-label">Technology</p>
+        <p class="impact-card-text">Informed ongoing tech pilots with the GIB Technology team — grounding feature decisions in validated banker workflows</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Onboarding</p>
+        <p class="impact-card-text">Guided IB onboarding development efforts, giving new bankers a documented view of the process for the first time</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">AI Research</p>
+        <p class="impact-card-text">Annotated data fed into a proof-of-concept LLM research repository, enabling the bank's AI-powered pitchbook creation initiative</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Coverage KPIs</p>
+        <p class="impact-card-text">Informed Coverage KPI development for senior leadership — connecting research findings to measurable business outcomes</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">IB Foundation</p>
+        <p class="impact-card-text">Became the foundational research that paved the way for persona-driven end-to-end journey mapping across the full Investment Banking group</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Strategy</p>
+        <p class="impact-card-text">Directly shaped the August Product Strategy workshop — used to refine product vision, prioritize the roadmap, and align cross-functional leadership</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSONS LEARNED -->
+  <div class="section reveal">
+    <p class="section-label">Lessons Learned</p>
+    <h2 class="section-title">What made this research land</h2>
+    <div class="lessons">
+      <div class="lesson">
+        <p class="lesson-text">Defining business objectives and securing strong stakeholder buy-in before research began was the single most valuable investment — it meant the findings had a home before they existed.</p>
+      </div>
+      <div class="lesson">
+        <p class="lesson-text">Pre-work with SMEs laid the groundwork for smooth user-facing sessions. Bankers trusted us more because we'd already done our homework — we weren't asking them to start from scratch.</p>
+      </div>
+      <div class="lesson">
+        <p class="lesson-text">In-person sessions and fast follow-up prototypes were critical to sustaining executive engagement. With a time-scarce audience, momentum is everything.</p>
+      </div>
+      <div class="lesson">
+        <p class="lesson-text">Deciding when alignment was needed — and when to move without it — required careful judgment. Not every decision needed consensus; some needed a clear owner willing to commit.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div>
+    <p class="bnav-label">← Previous</p>
+    <a href="index.html" class="bnav-link">Back to all work</a>
+  </div>
+  <div style="text-align: right;">
+    <p class="bnav-label">Next case study →</p>
+    <a href="autograph-case-study.html" class="bnav-link">Research That Reoriented a Company</a>
+  </div>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

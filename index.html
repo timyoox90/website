@@ -85,7 +85,7 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
+    min-height: 72vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 56px;
@@ -262,19 +262,146 @@
   .work-intro {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 6rem var(--pad) 3rem;
+    padding: 5rem var(--pad) 3rem;
   }
 
-  .case-studies { display: flex; flex-direction: column; }
+  .case-studies {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad) 5rem;
+  }
 
   .case-study {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 560px;
-    border-top: 1px solid var(--rule);
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    background: #fff;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
   }
 
-  .case-study:last-child { border-bottom: 1px solid var(--rule); }
+  .case-study:hover {
+    box-shadow: 0 12px 40px rgba(27,42,74,0.1);
+    transform: translateY(-3px);
+  }
+
+  /* odd cards: visual left, content right */
+  .case-study:nth-child(odd)  .case-visual  { order: 1; }
+  .case-study:nth-child(odd)  .case-content { order: 2; }
+  /* even cards: content left, visual right */
+  .case-study:nth-child(even) .case-content { order: 1; }
+  .case-study:nth-child(even) .case-visual  { order: 2; }
+
+  .case-visual {
+    min-height: 380px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .case-content {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .case-num {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+  }
+
+  .case-title {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .case-desc {
+    font-size: 0.93rem;
+    font-weight: 300;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--navy-light);
+    padding: 3px 9px;
+    border-radius: 3px;
+  }
+
+  .case-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    margin-bottom: 1.75rem;
+  }
+
+  .detail-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.25rem;
+  }
+
+  .detail-value {
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--ink-mid);
+    line-height: 1.4;
+  }
+
+  .case-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #ffffff !important;
+    background: var(--navy);
+    text-decoration: none;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    border-radius: 50px;
+    border: none;
+    width: fit-content;
+    opacity: 1 !important;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .case-link:hover {
+    background: var(--accent);
+    color: var(--navy) !important;
+    transform: translateY(-1px);
+  }
 
 
   .case-content {
@@ -348,23 +475,6 @@
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--ink-mid);
-  }
-
-  .case-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--navy);
-    text-decoration: none;
-    border-bottom: 1px solid var(--navy);
-    padding-bottom: 2px;
-    width: fit-content;
-    opacity: 0.5;
-    cursor: default;
   }
 
   .case-visual {
@@ -717,7 +827,10 @@
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; }
     .case-study { grid-template-columns: 1fr; }
-    .case-study:nth-child(even) .case-visual { order: 0; }
+    .case-study:nth-child(odd)  .case-visual  { order: 1; }
+    .case-study:nth-child(odd)  .case-content { order: 2; }
+    .case-study:nth-child(even) .case-content { order: 1; }
+    .case-study:nth-child(even) .case-visual  { order: 2; }
     .case-visual { min-height: 300px; }
     .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .skills-grid { grid-template-columns: 1fr; }
@@ -732,6 +845,7 @@
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="Tim_Yoo_Netflix_Resume.pdf" target="_blank">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -780,7 +894,7 @@
   <div class="work-intro reveal">
     <p class="section-label">Selected Work</p>
     <h2 class="section-heading">Case Studies</h2>
-    <p class="section-sub">Two research case studies spanning executive focus groups, mixed-methods discovery, and large-scale quantitative surveys — each shaping real product and strategy decisions.</p>
+    <p class="section-sub">Four research projects spanning executive focus groups, zero-to-one discovery, and large-scale mixed-methods programs — each shaping real product and strategy decisions.</p>
   </div>
 
   <div class="case-studies">
@@ -892,7 +1006,7 @@
             <p class="detail-value">First firm-wide lifecycle map; 6 downstream initiatives</p>
           </div>
         </div>
-        <a href="ecm-case-study.html" class="case-link" style="opacity:1; cursor:pointer;">Read case study →</a>
+        <a href="ecm-case-study.html" class="case-link">View Case Study →</a>
       </div>
     </div>
 
@@ -927,7 +1041,7 @@
             <p class="detail-value">Full product pivot to fan experience platform</p>
           </div>
         </div>
-        <a href="autograph-case-study.html" class="case-link" style="opacity:1; cursor:pointer;">Read case study &rarr;</a>
+        <a href="autograph-case-study.html" class="case-link">View Case Study →</a>
       </div>
       <div class="case-visual" style="padding:2rem 1.5rem 1.5rem; overflow:hidden; background:#111118; display:flex; align-items:center; justify-content:center;">
         <!-- Phone mockup wrapper -->
@@ -1038,7 +1152,7 @@
             <p class="detail-value">JTBD framework became shared product language; informed data field requirements for launch</p>
           </div>
         </div>
-        <a href="investor-profile-case-study.html" class="case-link" style="opacity:1; cursor:pointer;">Read case study →</a>
+        <a href="investor-profile-case-study.html" class="case-link">View Case Study →</a>
       </div>
       <div class="case-visual" style="padding:2rem 1.5rem 1.5rem; overflow:hidden; background:#1C3A2A; display:flex; align-items:center; justify-content:center;">
         <div style="width:100%; max-width:480px;">
@@ -1143,7 +1257,7 @@
             <p class="detail-value">Platform improvements shipped; deal opportunity discovery module requirements came verbatim from research</p>
           </div>
         </div>
-        <a href="banker-experience-case-study.html" class="case-link" style="opacity:1; cursor:pointer;">Read case study →</a>
+        <a href="banker-experience-case-study.html" class="case-link">View Case Study →</a>
       </div>
     </div>
 
@@ -1156,8 +1270,8 @@
     <div class="about-left reveal">
       <!-- Photo -->
       <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; margin-bottom:1.5rem; border:3px solid var(--gold); flex-shrink:0;">
-        <img src="tim-yoo-headshot.jpg" alt="Tim Yoo" style="width:100%; height:100%; object-fit:cover; object-position:center top;"
-          onerror="this.parentElement.style.background='#1B2A4A'; this.style.display='none';">
+        <img src="tim-yoo-headshot.jfif" alt="Tim Yoo" style="width:100%; height:100%; object-fit:cover; object-position:center top;"
+          onerror="this.src='tim-yoo-headshot.jpg'; this.onerror=function(){this.parentElement.style.background='#1B2A4A'; this.style.display='none';}">
       </div>
       <p class="section-label">About</p>
       <h2 class="section-heading">Research as a strategic discipline</h2>

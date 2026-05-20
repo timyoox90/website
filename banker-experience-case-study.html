@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banker Experience — Tim Yoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1B2A4A;
+    --navy-mid: #2E4270;
+    --navy-light: #E8EDF5;
+    --navy-pale: #F4F6FA;
+    --ink: #141414;
+    --ink-mid: #3A3A3A;
+    --ink-soft: #5A5A5A;
+    --ink-faint: #A8A8A8;
+    --rule: #E2E2E2;
+    --white: #FFFFFF;
+    --accent: #C8A96E;
+    --accent-light: #F9F3E8;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 860px;
+    --pad: clamp(1.5rem, 5vw, 3rem);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.93); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule); padding: 0 var(--pad); height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--navy); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .nav-back:hover { color: var(--navy); }
+
+  .hero { padding-top: 56px; background: var(--navy); }
+  .hero-inner { max-width: var(--max); margin: 0 auto; padding: 4rem var(--pad) 3rem; }
+  .hero-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .hero-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(200,169,110,0.4); padding: 3px 10px; border-radius: 3px; }
+  .hero-num { font-size: 0.72rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+  .hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--white); line-height: 1.1; margin-bottom: 1.25rem; }
+  .hero-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+  .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 640px; margin-bottom: 3rem; }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; }
+  .hstat { padding: 0 1.5rem 1.5rem 0; border-right: 1px solid rgba(255,255,255,0.08); }
+  .hstat:last-child { border-right: none; padding-right: 0; }
+  .hstat:not(:first-child) { padding-left: 1.5rem; }
+  .hstat-val { font-family: var(--serif); font-size: 1.6rem; color: var(--white); margin-bottom: 0.25rem; line-height: 1; }
+  .hstat-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.4; }
+
+  .content { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+  .section { padding: 4rem 0; border-bottom: 1px solid var(--rule); }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .section-title { font-family: var(--serif); font-size: 1.65rem; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
+  .body-text { font-size: 0.97rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; }
+  .body-text + .body-text { margin-top: 1rem; }
+
+  .callout { background: var(--navy-pale); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; margin: 2rem 0; }
+  .callout-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .callout p { font-size: 0.92rem; font-weight: 300; color: var(--ink-mid); line-height: 1.7; }
+
+  .participants { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+  .participant-card { border: 1px solid var(--rule); border-radius: 8px; padding: 1.1rem; }
+  .participant-role { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+  .participant-desc { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; font-weight: 300; }
+
+  .focus-areas { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.5rem 0; }
+  .focus-pill { background: var(--navy-light); border-radius: 4px; padding: 0.6rem 0.9rem; font-size: 0.82rem; font-weight: 500; color: var(--navy); }
+
+  .findings { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+  .finding { border: 1px solid var(--rule); border-radius: 0; overflow: hidden; margin-bottom: -1px; }
+  .finding:first-child { border-radius: 8px 8px 0 0; }
+  .finding:last-child { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .finding-header { display: grid; grid-template-columns: 28px 1fr; gap: 0.75rem; padding: 1.25rem; align-items: start; background: var(--white); cursor: pointer; }
+  .finding-num { font-size: 0.72rem; font-weight: 500; color: var(--ink-faint); padding-top: 2px; }
+  .finding-title { font-size: 0.95rem; font-weight: 500; color: var(--navy); line-height: 1.3; }
+  .finding-subtitle { font-size: 0.8rem; font-weight: 300; color: var(--ink-soft); margin-top: 0.2rem; }
+  .finding-body { padding: 0 1.25rem 1.25rem 3.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .finding-insight p { font-size: 0.83rem; font-weight: 300; color: var(--ink-soft); line-height: 1.7; }
+  .finding-insight li { font-size: 0.83rem; font-weight: 300; color: var(--ink-soft); line-height: 1.7; margin-left: 1rem; margin-bottom: 0.3rem; }
+  .finding-quote { background: var(--accent-light); border-left: 2px solid var(--accent); padding: 0.9rem 1rem; border-radius: 0 4px 4px 0; }
+  .finding-quote-text { font-style: italic; font-size: 0.8rem; color: var(--ink-mid); line-height: 1.65; margin-bottom: 0.5rem; }
+  .finding-quote-attr { font-size: 0.7rem; font-weight: 500; color: var(--ink-faint); letter-spacing: 0.04em; }
+
+  .tool-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .tool-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--rule); }
+  .tool-table td { padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .tool-table tr:last-child td { border-bottom: none; }
+  .tool-name { font-weight: 500; color: var(--navy); }
+  .tool-use { color: var(--ink-soft); font-weight: 300; }
+  .tool-gap { color: var(--ink-faint); font-weight: 300; font-style: italic; }
+  .tool-tag { display: inline-block; font-size: 0.68rem; font-weight: 500; padding: 2px 7px; border-radius: 3px; }
+  .tag-primary { background: var(--navy-light); color: var(--navy); }
+  .tag-gap { background: #FEF3E7; color: #8B5A0A; }
+
+  .recs { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+  .rec { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; padding: 1.25rem; border: 1px solid var(--rule); border-radius: 8px; align-items: start; }
+  .rec-num { width: 28px; height: 28px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 500; color: white; flex-shrink: 0; }
+  .rec-content { }
+  .rec-title { font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 0.35rem; }
+  .rec-body { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); line-height: 1.65; }
+
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .impact-card { background: var(--navy-pale); border-radius: 8px; padding: 1.25rem; }
+  .impact-card-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5rem; }
+  .impact-card-text { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.6; }
+
+  .bottom-nav { background: var(--navy-pale); border-top: 1px solid var(--rule); padding: 3rem var(--pad); display: flex; justify-content: space-between; align-items: center; }
+  .bnav-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.3rem; }
+  .bnav-link { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); text-decoration: none; }
+  .bnav-link:hover { text-decoration: underline; }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 700px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hstat { border-right: none; padding: 0 0 1rem; }
+    .participants { grid-template-columns: 1fr; }
+    .focus-areas { grid-template-columns: 1fr; }
+    .finding-body { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="tim_yoo_portfolio.html" class="nav-logo">Tim Yoo</a>
+  <a href="tim_yoo_portfolio.html" class="nav-back">← All work</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span class="hero-tag">Case Study 01</span>
+      <span class="hero-num">JPMorgan Chase · GIB Digital · 2024</span>
+    </div>
+    <h1 class="hero-title">Reimagining the<br><em>Banker's Desktop</em></h1>
+    <p class="hero-sub">Capital markets bankers were piecing together their workday across Bloomberg, FactSet, NIBP, Excel, and a dozen browser tabs. Market Monitor was built to change that — a single platform for market intelligence, deal tracking, and client insights. This research uncovered why bankers weren't making the switch, and what it would actually take to earn their trust.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-val">7</div>
+        <div class="hstat-label">Bankers interviewed across DCM & ECM</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">60min</div>
+        <div class="hstat-label">1:1 depth interviews</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">6</div>
+        <div class="hstat-label">Core finding themes</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">5</div>
+        <div class="hstat-label">Strategic recommendations</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section reveal">
+    <p class="section-label">The Challenge</p>
+    <h2 class="section-title">A one-stop shop that bankers weren't stopping at</h2>
+    <p class="body-text">Market Monitor was JPMorgan's answer to tool fragmentation in capital markets — a platform designed to consolidate market intelligence, deal data, and client insights into a single experience. The vision was compelling. The reality was that bankers kept flipping back to Bloomberg, NIBP, FactSet, and Excel the moment Market Monitor didn't have exactly what they needed.</p>
+    <p class="body-text">The product team needed to understand not just what features were missing, but why adoption had stalled despite meaningful investment. What would it take to make Market Monitor the first screen bankers opened — not the third?</p>
+    <div class="callout">
+      <p class="callout-label">Research Brief</p>
+      <p>Understand how capital markets bankers use Market Monitor in their daily workflow, identify the friction points driving tool-switching, and surface the feature gaps and trust barriers preventing full adoption.</p>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Research Approach</p>
+    <h2 class="section-title">Going deep with the people who live in the data</h2>
+    <p class="body-text">The study used 60-minute 1:1 interviews to go beyond surface-level feedback and understand how bankers actually structure their day. Participants spanned Leveraged Finance, Investment Grade, and ECM — covering the breadth of use cases that Market Monitor needed to serve.</p>
+
+    <div class="participants">
+      <div class="participant-card">
+        <p class="participant-role">DCM — Leveraged Finance</p>
+        <p class="participant-desc">2 bankers covering LF deals — high focus on trading levels, loan tracking, and soft call monitoring</p>
+      </div>
+      <div class="participant-card">
+        <p class="participant-role">DCM — Investment Grade</p>
+        <p class="participant-desc">2 bankers covering IG — primary need for spread-based views and issuer-level bond lists</p>
+      </div>
+      <div class="participant-card">
+        <p class="participant-role">ECM</p>
+        <p class="participant-desc">Group session with ECM banker and Associates/Analysts — broader scope including equity story and strategic client conversations</p>
+      </div>
+    </div>
+
+    <p class="body-text">Each session covered four focus areas:</p>
+    <div class="focus-areas">
+      <div class="focus-pill">Market Monitor daily usage patterns</div>
+      <div class="focus-pill">Workflow pain points & tool-switching triggers</div>
+      <div class="focus-pill">Feature requests & unmet needs</div>
+      <div class="focus-pill">Future vision for the ideal platform</div>
+    </div>
+    <p class="body-text" style="margin-top:1.5rem;">Synthesis focused on direct quotes and actionable feedback — keeping banker language intact rather than abstracting it away, so product teams could hear the frustration in their own words.</p>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Key Findings</p>
+    <h2 class="section-title">Six themes, one consistent story</h2>
+    <p class="body-text">Every banker interviewed wanted to use fewer tools. Every banker was still using five. The findings explained why — and pointed clearly to what would need to change.</p>
+
+    <div class="findings">
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">01</span>
+          <div>
+            <p class="finding-title">Bankers want personalization and customization</p>
+            <p class="finding-subtitle">One-size-fits-all is no fit at all</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Bankers want to tailor dashboards and workflows to their own coverage, sector, and seniority</li>
+              <li>The ability to create, save, and reuse watchlists, comp sets, and widgets is highly valued</li>
+              <li>MDs, VPs, and analysts all surface different information — the platform needs to flex for each</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"Let me curate my own initial dashboard list. I want to open up a dashboard and see the macro picture, the spreads on my clients, and the latest pricings. I want to pick and choose what's relevant to me, not just what someone else decided is important."</p>
+            <p class="finding-quote-attr">— Yannan, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">02</span>
+          <div>
+            <p class="finding-title">Bankers expect automation and actionable insights</p>
+            <p class="finding-subtitle">Not raw data — intelligence that tells them what to do next</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Bankers want the system to proactively surface opportunities, risks, and relevant changes</li>
+              <li>Automated alerts and AI-driven recommendations are highly desired over passive data displays</li>
+              <li>Actionable insights (e.g., "this client's bond is trading above par") far outweigh static data dumps</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"If there was a way for me to be more efficient — be it Market Monitor or potentially LLM Suite — I could start my day, get three ideas, and in five minutes create really good touch points with clients. Right now, I have to hunt for those opportunities myself."</p>
+            <p class="finding-quote-attr">— Renaud, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">03</span>
+          <div>
+            <p class="finding-title">Automation should free up juniors for higher-value work</p>
+            <p class="finding-subtitle">The job is shifting — the platform needs to shift with it</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Junior bankers spend significant time on manual data gathering and first-draft production</li>
+              <li>Better automation should shift their focus to idea generation, client engagement, and strategic thinking</li>
+              <li>This serves both efficiency and professional development goals</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"It should be more about checking the work versus producing the first version. The job is changing — it's going to be more like fact-checking and knowing where to spot mistakes, not just pulling data from Bloomberg or Excel."</p>
+            <p class="finding-quote-attr">— Tanpreet, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">04</span>
+          <div>
+            <p class="finding-title">Bankers juggle multiple tools to get the data they need</p>
+            <p class="finding-subtitle">Fragmentation is the default — and it's costly</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Bankers routinely combine Market Monitor, Bloomberg, FactSet, NIBP, and Excel in a single workflow</li>
+              <li>Each tool fills a specific gap that the others don't address</li>
+              <li>Context-switching increases the risk of missing information and slows down prep considerably</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"I use all three sources to get to the data points I need. I would probably be more on Market Monitor if it had all those features, but right now I'm toggling between FactSet for the daily brief, Bloomberg for deal data, and Market Monitor for a broad market summary. It's a lot of windows open at once."</p>
+            <p class="finding-quote-attr">— Tanpreet, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">05</span>
+          <div>
+            <p class="finding-title">Inconsistent experience pushes bankers back to other tools</p>
+            <p class="finding-subtitle">When the UX breaks down, trust breaks down with it</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Bankers expect seamless, predictable behaviour across all features and data types</li>
+              <li>Inconsistencies in navigation, data presentation, or feature availability create confusion</li>
+              <li>When the UX is fragmented, bankers revert to familiar tools even if those are less efficient overall</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"If I go on the transactions tab and look for the same name, I'll have a different look and feel compared to the search bar. It's confusing, and when I can't find what I need quickly, I just go back to the old way — NIBP or even Excel."</p>
+            <p class="finding-quote-attr">— Yannan, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <span class="finding-num">06</span>
+          <div>
+            <p class="finding-title">Trust in data quality and timeliness drives adoption</p>
+            <p class="finding-subtitle">Bankers are loyal to what they know works — full stop</p>
+          </div>
+        </div>
+        <div class="finding-body">
+          <div class="finding-insight">
+            <ul>
+              <li>Bankers are loyal to tools that have proven reliable and accurate over time</li>
+              <li>Even if a new platform offers more features, users won't switch unless data is consistently up-to-date</li>
+              <li>A single data delay or error can erase months of goodwill and push users back to legacy systems</li>
+            </ul>
+          </div>
+          <div class="finding-quote">
+            <p class="finding-quote-text">"If I find something that actually has good data quality, I kind of stick with it for a while until someone really proves to me it's accurate and up to speed. That's why I still use NIBP for trading levels, even though I know Market Monitor is supposed to have the same data. I just trust what I know works."</p>
+            <p class="finding-quote-attr">— Ryan, DCM Banker</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+<div class="viz-wrap" style="margin:2.5rem 0 0;">
+  <p class="viz-label">Market Monitor — Deal Opportunity View (Concept Mockup)</p>
+  <div style="border:1px solid var(--rule); border-radius:10px; overflow:hidden; font-family:var(--sans);">
+    <!-- Top bar -->
+    <div style="background:var(--navy); padding:0.6rem 1rem; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="font-size:0.78rem; font-weight:500; color:white;">Market Monitor</div>
+        <div style="display:flex; gap:0.5rem;">
+          <span style="font-size:0.65rem; color:rgba(255,255,255,0.4); cursor:pointer;">Dashboard</span>
+          <span style="font-size:0.65rem; color:rgba(255,255,255,0.4); cursor:pointer;">Markets</span>
+          <span style="font-size:0.65rem; color:white; border-bottom:1px solid var(--accent); padding-bottom:1px;">Opportunities</span>
+          <span style="font-size:0.65rem; color:rgba(255,255,255,0.4);">Clients</span>
+        </div>
+      </div>
+      <div style="font-size:0.65rem; color:rgba(255,255,255,0.4);">Last updated: 2 min ago ●</div>
+    </div>
+    <!-- Sub nav / filters -->
+    <div style="background:var(--navy-pale); padding:0.5rem 1rem; display:flex; align-items:center; gap:0.75rem; border-bottom:1px solid var(--rule);">
+      <span style="font-size:0.68rem; font-weight:500; color:var(--navy); background:var(--navy-light); padding:3px 10px; border-radius:3px;">All</span>
+      <span style="font-size:0.68rem; color:var(--ink-soft); padding:3px 8px;">Block Trade</span>
+      <span style="font-size:0.68rem; color:var(--ink-soft); padding:3px 8px;">Repricing</span>
+      <span style="font-size:0.68rem; color:var(--ink-soft); padding:3px 8px;">Follow-On</span>
+      <span style="font-size:0.68rem; color:var(--ink-soft); padding:3px 8px;">IPO-Ready</span>
+      <div style="margin-left:auto; font-size:0.68rem; color:var(--ink-faint);">My Coverage Only ○</div>
+    </div>
+    <!-- Table header -->
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.5rem 1rem; border-bottom:1px solid var(--rule); background:var(--white);">
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Ticker</div>
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Company</div>
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Type</div>
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Δ 30d</div>
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Signal</div>
+      <div style="font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); font-weight:500;">Coverage</div>
+    </div>
+    <!-- Rows -->
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.65rem 1rem; border-bottom:1px solid var(--rule); background:#FAFFFE; align-items:center;">
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy);">FSLR</div>
+      <div style="font-size:0.82rem; color:var(--ink-mid);">First Solar Inc.</div>
+      <div><span style="font-size:0.65rem; background:#E1F5EE; color:#0F6E56; font-weight:500; padding:2px 8px; border-radius:3px;">Block Trade</span></div>
+      <div style="font-size:0.82rem; color:#1D9E75; font-weight:500;">+2.4%</div>
+      <div style="font-size:0.72rem; color:#1D9E75;">● Strong</div>
+      <div style="font-size:0.72rem; color:var(--ink-soft);">J. Martinez</div>
+    </div>
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.65rem 1rem; border-bottom:1px solid var(--rule); align-items:center; background:var(--white);">
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy);">NFLX</div>
+      <div style="font-size:0.82rem; color:var(--ink-mid);">Netflix Inc.</div>
+      <div><span style="font-size:0.65rem; background:var(--navy-light); color:var(--navy); font-weight:500; padding:2px 8px; border-radius:3px;">Repricing</span></div>
+      <div style="font-size:0.82rem; color:#1D9E75; font-weight:500;">+1.1%</div>
+      <div style="font-size:0.72rem; color:#EF9F27;">● Moderate</div>
+      <div style="font-size:0.72rem; color:var(--ink-soft);">K. Patel</div>
+    </div>
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.65rem 1rem; border-bottom:1px solid var(--rule); align-items:center; background:var(--white);">
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy);">AAPL</div>
+      <div style="font-size:0.82rem; color:var(--ink-mid);">Apple Inc.</div>
+      <div><span style="font-size:0.65rem; background:#E1F5EE; color:#0F6E56; font-weight:500; padding:2px 8px; border-radius:3px;">Block Trade</span></div>
+      <div style="font-size:0.82rem; color:#1D9E75; font-weight:500;">+0.8%</div>
+      <div style="font-size:0.72rem; color:#1D9E75;">● Strong</div>
+      <div style="font-size:0.72rem; color:var(--ink-soft);">S. Williams</div>
+    </div>
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.65rem 1rem; border-bottom:1px solid var(--rule); align-items:center; background:var(--white);">
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy);">META</div>
+      <div style="font-size:0.82rem; color:var(--ink-mid);">Meta Platforms</div>
+      <div><span style="font-size:0.65rem; background:#E1F5EE; color:#0F6E56; font-weight:500; padding:2px 8px; border-radius:3px;">Block Trade</span></div>
+      <div style="font-size:0.82rem; color:#1D9E75; font-weight:500;">+3.2%</div>
+      <div style="font-size:0.72rem; color:#E24B4A;">● Weak</div>
+      <div style="font-size:0.72rem; color:var(--ink-soft);">R. Chen</div>
+    </div>
+    <div style="display:grid; grid-template-columns:80px 1fr 100px 90px 90px 100px; padding:0.65rem 1rem; align-items:center; background:var(--white);">
+      <div style="font-size:0.82rem; font-weight:500; color:var(--navy);">TSLA</div>
+      <div style="font-size:0.82rem; color:var(--ink-mid);">Tesla Inc.</div>
+      <div><span style="font-size:0.65rem; background:var(--accent-light); color:#8B5A0A; font-weight:500; padding:2px 8px; border-radius:3px;">Follow-On</span></div>
+      <div style="font-size:0.82rem; color:#E24B4A; font-weight:500;">–0.4%</div>
+      <div style="font-size:0.72rem; color:#EF9F27;">● Moderate</div>
+      <div style="font-size:0.72rem; color:var(--ink-soft);">J. Martinez</div>
+    </div>
+  </div>
+  <p style="font-size:0.72rem; color:var(--ink-faint); margin-top:0.5rem;">Concept mockup illustrating the deal opportunity discovery experience discussed in research sessions.</p>
+</div>
+
+
+  <div class="section reveal">
+    <p class="section-label">The Tool Fragmentation Problem</p>
+    <h2 class="section-title">What bankers were using — and why</h2>
+    <p class="body-text">Every tool in a banker's stack existed because Market Monitor didn't yet fully cover that use case. Understanding this landscape was critical to prioritizing what the platform needed to absorb first.</p>
+
+    <table class="tool-table">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Primary use</th>
+          <th>Why they still need it</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tool-name">Market Monitor</span></td>
+          <td class="tool-use">Macro overview, in-market calendar, deal stats</td>
+          <td class="tool-use">Missing personalization; inconsistent UX; trust gaps</td>
+          <td><span class="tool-tag tag-primary">Platform in question</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">Bloomberg</span></td>
+          <td class="tool-use">Trading levels, deal data, historical price charts</td>
+          <td class="tool-use">Deep trust from years of reliable data; keyboard-first UX</td>
+          <td><span class="tool-tag tag-gap">Overlap / gap</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">FactSet</span></td>
+          <td class="tool-use">Daily brief, financial modeling</td>
+          <td class="tool-use">More comprehensive financials; trusted data freshness</td>
+          <td><span class="tool-tag tag-gap">Overlap / gap</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">NIBP</span></td>
+          <td class="tool-use">Trading levels, bond data, known UX</td>
+          <td class="tool-use">Familiarity; bankers know exactly what it does and doesn't do</td>
+          <td><span class="tool-tag tag-gap">Overlap / gap</span></td>
+        </tr>
+        <tr>
+          <td><span class="tool-name">Excel</span></td>
+          <td class="tool-use">Custom modeling, comps, deal tracking</td>
+          <td class="tool-use">Full flexibility; no platform constraint; always available</td>
+          <td><span class="tool-tag tag-gap">Workaround</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+<div class="viz-wrap" style="margin-top:2.5rem;">
+  <p class="viz-label">A Typical Banker's Morning — Tool Fragmentation</p>
+  <div style="border:1px solid var(--rule); border-radius:10px; padding:1.5rem; background:var(--navy-pale);">
+    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1.25rem; flex-wrap:wrap;">
+      <div style="font-size:0.75rem; color:var(--ink-soft); font-weight:300;">"To start my day I open..."</div>
+    </div>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+      <div style="background:var(--white); border:1px solid var(--rule); border-radius:6px; padding:0.6rem 1rem; text-align:center;">
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">Bloomberg</div>
+        <div style="font-size:0.68rem; color:var(--ink-faint); margin-top:2px;">Trading levels</div>
+      </div>
+      <div style="background:var(--white); border:1px solid var(--rule); border-radius:6px; padding:0.6rem 1rem; text-align:center;">
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">FactSet</div>
+        <div style="font-size:0.68rem; color:var(--ink-faint); margin-top:2px;">Daily brief</div>
+      </div>
+      <div style="background:var(--white); border:1px solid var(--rule); border-radius:6px; padding:0.6rem 1rem; text-align:center;">
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">NIBP</div>
+        <div style="font-size:0.68rem; color:var(--ink-faint); margin-top:2px;">Bond data</div>
+      </div>
+      <div style="background:var(--white); border:2px solid var(--navy); border-radius:6px; padding:0.6rem 1rem; text-align:center;">
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">Market Monitor</div>
+        <div style="font-size:0.68rem; color:var(--ink-faint); margin-top:2px;">Macro overview</div>
+      </div>
+      <div style="background:var(--white); border:1px solid var(--rule); border-radius:6px; padding:0.6rem 1rem; text-align:center;">
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">Excel</div>
+        <div style="font-size:0.68rem; color:var(--ink-faint); margin-top:2px;">Custom models</div>
+      </div>
+    </div>
+    <div style="height:1px; background:var(--rule); margin-bottom:1.25rem;"></div>
+    <div style="display:flex; align-items:baseline; gap:0.5rem;">
+      <div style="font-family:var(--serif); font-size:1.8rem; color:var(--navy);">5</div>
+      <div style="font-size:0.82rem; color:var(--ink-soft); font-weight:300;">tools open simultaneously — every morning — to piece together the picture that Market Monitor was designed to provide alone.</div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="section reveal">
+    <p class="section-label">Recommendations</p>
+    <h2 class="section-title">Five directions to earn the switch</h2>
+    <p class="body-text">The research pointed to five concrete areas where product investment would have the greatest impact on adoption and trust — prioritized by frequency of mention and business impact.</p>
+
+    <div class="recs">
+      <div class="rec">
+        <div class="rec-num">1</div>
+        <div class="rec-content">
+          <p class="rec-title">Build personalized, role-aware experiences</p>
+          <p class="rec-body">Let bankers curate their own dashboards — selecting the widgets, watchlists, and data views relevant to their coverage and seniority. What matters to an IG MD is fundamentally different from what an ECM analyst needs at 7am. A single default layout serves no one well.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-num">2</div>
+        <div class="rec-content">
+          <p class="rec-title">Surface actionable insights, not just data</p>
+          <p class="rec-body">Move beyond passive data display to proactive, contextual intelligence. Automated alerts for deal opportunities — a bond trading above par, a loan approaching its soft call window, a repricing candidate — should arrive before bankers go looking for them.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-num">3</div>
+        <div class="rec-content">
+          <p class="rec-title">Reduce reliance on multiple tools by expanding core data coverage</p>
+          <p class="rec-body">Every tool in a banker's stack exists because of a gap. Prioritize completing the 70% of workflows Market Monitor already covers — doing them at 100% — before expanding scope. Consistent depth on core use cases (comps, search, trading levels) will drive consolidation more than new features.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-num">4</div>
+        <div class="rec-content">
+          <p class="rec-title">Invest in data quality and timeliness as a trust foundation</p>
+          <p class="rec-body">Bankers won't switch platforms if they can't trust the data. Prioritize real-time data enrichment and verification — especially for deal launches, where a multi-hour delay forces bankers to answer client questions using other sources. Trust, once broken, is very slow to rebuild.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <div class="rec-num">5</div>
+        <div class="rec-content">
+          <p class="rec-title">Create a consistent, dense, keyboard-navigable experience</p>
+          <p class="rec-body">Bankers think in data density — they want maximum information in minimum clicks, not aesthetic whitespace. Prioritize consistent navigation patterns across all sections of the platform, and support keyboard-first interaction for power users who spend their entire day in the tool.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Impact</p>
+    <h2 class="section-title">Research that shaped the roadmap</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <p class="impact-card-label">Product Strategy</p>
+        <p class="impact-card-text">Findings directly informed Market Monitor's roadmap prioritization — shifting focus toward data quality, personalization, and actionable alerting</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Stakeholder Alignment</p>
+        <p class="impact-card-text">Executive summary presented to senior GIB Digital product leadership, anchoring strategy conversations in direct banker voice rather than assumptions</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Deal Discovery</p>
+        <p class="impact-card-text">Banker articulation of deal opportunity needs (repricings, block trades, soft call tracking) defined the feature requirements for the deal opportunity module</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Cross-Team Input</p>
+        <p class="impact-card-text">Research insights shared with GIB Tech, LLM Suite, and onboarding teams — extending the value of a single research effort across multiple product initiatives</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Role Segmentation</p>
+        <p class="impact-card-text">Surfaced clear distinctions between ECM, IG, and LevFin needs — informing a role-aware product strategy that treated user personas as first-class design constraints</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Foundation for ECM Research</p>
+        <p class="impact-card-text">Banker Experience research established the research infrastructure and stakeholder trust that made the deeper ECM journey mapping study possible</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+  <div>
+    <p class="bnav-label">← Previous</p>
+    <a href="tim_yoo_portfolio.html" class="bnav-link">Back to all work</a>
+  </div>
+  <div style="text-align: right;">
+    <p class="bnav-label">Next case study →</p>
+    <a href="ecm-case-study.html" class="bnav-link">Mapping the IPO Journey</a>
+  </div>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

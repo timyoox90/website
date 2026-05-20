@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Profile — Tim Yoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1B2A4A;
+    --navy-mid: #2E4270;
+    --navy-light: #E8EDF5;
+    --navy-pale: #F4F6FA;
+    --ink: #141414;
+    --ink-mid: #3A3A3A;
+    --ink-soft: #5A5A5A;
+    --ink-faint: #A8A8A8;
+    --rule: #E2E2E2;
+    --white: #FFFFFF;
+    --accent: #C8A96E;
+    --accent-light: #F9F3E8;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 860px;
+    --pad: clamp(1.5rem, 5vw, 3rem);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.93); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule); padding: 0 var(--pad); height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.05rem; color: var(--navy); text-decoration: none; }
+  .nav-back { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .nav-back:hover { color: var(--navy); }
+
+  .hero { padding-top: 56px; background: var(--navy); }
+  .hero-inner { max-width: var(--max); margin: 0 auto; padding: 4rem var(--pad) 3rem; }
+  .hero-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .hero-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(200,169,110,0.4); padding: 3px 10px; border-radius: 3px; }
+  .hero-num { font-size: 0.72rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+  .hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--white); line-height: 1.1; margin-bottom: 1.25rem; }
+  .hero-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+  .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 640px; margin-bottom: 3rem; }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; }
+  .hstat { padding: 0 1.5rem 1.5rem 0; border-right: 1px solid rgba(255,255,255,0.08); }
+  .hstat:last-child { border-right: none; padding-right: 0; }
+  .hstat:not(:first-child) { padding-left: 1.5rem; }
+  .hstat-val { font-family: var(--serif); font-size: 1.6rem; color: var(--white); margin-bottom: 0.25rem; line-height: 1; }
+  .hstat-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.4; }
+
+  .content { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+  .section { padding: 4rem 0; border-bottom: 1px solid var(--rule); }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .section-title { font-family: var(--serif); font-size: 1.65rem; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
+  .body-text { font-size: 0.97rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; }
+  .body-text + .body-text { margin-top: 1rem; }
+
+  .callout { background: var(--navy-pale); border-left: 3px solid var(--navy); padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; margin: 2rem 0; }
+  .callout-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .callout p { font-size: 0.92rem; font-weight: 300; color: var(--ink-mid); line-height: 1.7; }
+
+  .key-insight {
+    background: var(--navy); border-radius: 10px; padding: 2rem; margin: 2rem 0;
+  }
+  .key-insight-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+  .key-insight-text { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--white); line-height: 1.6; }
+
+  .participants-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 2rem 0; }
+  .participant { border: 1px solid var(--rule); border-radius: 8px; padding: 1rem; }
+  .participant-id { font-size: 1rem; font-weight: 500; color: var(--navy); margin-bottom: 0.2rem; }
+  .participant-region { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .participant-focus { font-size: 0.78rem; color: var(--ink-soft); line-height: 1.5; font-weight: 300; }
+  .participant-tenure { font-size: 0.7rem; color: var(--ink-faint); margin-top: 0.35rem; }
+
+  .jtbd-map { margin: 2rem 0; }
+  .jtbd-item { display: grid; grid-template-columns: 220px 1fr; border: 1px solid var(--rule); border-radius: 0; margin-bottom: -1px; overflow: hidden; }
+  .jtbd-item:first-child { border-radius: 8px 8px 0 0; }
+  .jtbd-item:last-child { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .jtbd-left { background: var(--navy); padding: 1.25rem 1rem; display: flex; flex-direction: column; justify-content: center; }
+  .jtbd-job { font-size: 0.82rem; font-weight: 500; color: var(--white); line-height: 1.3; margin-bottom: 0.3rem; }
+  .jtbd-capability { font-size: 0.7rem; color: rgba(200,169,110,0.8); line-height: 1.4; }
+  .jtbd-right { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .jtbd-problem { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.6; font-weight: 300; }
+  .jtbd-quote { font-style: italic; font-size: 0.78rem; color: var(--ink-mid); border-left: 2px solid var(--accent); padding-left: 0.75rem; line-height: 1.55; }
+  .jtbd-attr { font-size: 0.68rem; color: var(--ink-faint); font-style: normal; font-weight: 500; margin-top: 0.2rem; }
+
+  .current-vs-target { margin: 2rem 0; }
+  .cvt-header { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-bottom: -1px; }
+  .cvt-col-head { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--navy); padding: 0.75rem 1rem; border: 1px solid var(--navy); }
+  .cvt-col-head:nth-child(1) { border-radius: 8px 0 0 0; }
+  .cvt-col-head:nth-child(3) { border-radius: 0 8px 0 0; }
+  .cvt-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid var(--rule); border-top: none; }
+  .cvt-row:last-child { border-radius: 0 0 8px 8px; }
+  .cvt-cell { padding: 0.9rem 1rem; font-size: 0.82rem; border-right: 1px solid var(--rule); line-height: 1.55; }
+  .cvt-cell:last-child { border-right: none; }
+  .cvt-question { font-weight: 400; color: var(--ink-mid); }
+  .cvt-current { font-weight: 300; color: var(--ink-soft); font-style: italic; }
+  .cvt-target { font-weight: 400; color: var(--navy); }
+
+  .signal-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+  .signal-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--rule); }
+  .signal-table td { padding: 0.75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .signal-table tr:last-child td { border-bottom: none; }
+  .signal-name { font-weight: 500; color: var(--navy); }
+  .signal-example { color: var(--ink-soft); font-weight: 300; font-size: 0.8rem; }
+  .signal-solution { color: var(--ink-mid); font-weight: 300; font-size: 0.8rem; }
+
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .impact-card { background: var(--navy-pale); border-radius: 8px; padding: 1.25rem; }
+  .impact-card-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5rem; }
+  .impact-card-text { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.6; }
+
+  .bottom-nav { background: var(--navy-pale); border-top: 1px solid var(--rule); padding: 3rem var(--pad); display: flex; justify-content: space-between; align-items: center; }
+  .bnav-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.3rem; }
+  .bnav-link { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); text-decoration: none; }
+  .bnav-link:hover { text-decoration: underline; }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 700px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hstat { border-right: none; padding: 0 0 1rem; }
+    .participants-grid { grid-template-columns: 1fr 1fr; }
+    .jtbd-item { grid-template-columns: 1fr; }
+    .cvt-header, .cvt-row { grid-template-columns: 1fr; }
+    .cvt-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+    .impact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="tim_yoo_portfolio.html" class="nav-logo">Tim Yoo</a>
+  <a href="tim_yoo_portfolio.html" class="nav-back">← All work</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">
+      <span class="hero-tag">Case Study 03</span>
+      <span class="hero-num">JPMorgan Chase · GIB Digital · March 2026</span>
+    </div>
+    <h1 class="hero-title">The Snapshot<br><em>Before the Room</em></h1>
+    <p class="hero-sub">SIG bankers walk into every client meeting armed with a patchwork of manually assembled data — starred contacts, personal Excel trackers, and whatever they could pull from DASH before the call. This research set out to define what a truly useful Investor Profile would look like: not a new system to learn, but an automated version of the mental models experienced bankers had already built for themselves.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-val">7</div>
+        <div class="hstat-label">In-depth interviews, 30–90 min each</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">Global</div>
+        <div class="hstat-label">North America & EMEA participants</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">5</div>
+        <div class="hstat-label">Key banker jobs to be done</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val">DASH</div>
+        <div class="hstat-label">Target platform: Investor Profile in DASH</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section reveal">
+    <p class="section-label">The Challenge</p>
+    <h2 class="section-title">Fragmentation as the default operating mode</h2>
+    <p class="body-text">SIG (Sponsor and Investor Group) bankers at JPMorgan are responsible for managing some of the most complex, high-value client relationships in investment banking — covering major private equity firms, sovereign wealth funds, and growth equity investors globally. Yet when it came time to prepare for a client interaction, they were on their own.</p>
+    <p class="body-text">Multiple open screens. Manual Excel trackers. Personal workarounds. Calls to colleagues. The information they needed existed somewhere in the firm — but it was scattered across DASH, Deal Logic, separate CRM tools, business manager reports, and institutional memory. There was no single view that told a banker what they needed to know before walking into a room.</p>
+
+    <div class="callout">
+      <p class="callout-label">Core Problem</p>
+      <p>SIG bankers are operating in a fragmented technology environment, maintaining multiple open screens and manual trackers to accomplish what should be unified workflows. This fragmentation creates inefficiency, increases the risk of missed opportunities, and makes it difficult to present a cohesive "One JPMorgan" view to clients.</p>
+    </div>
+
+    <div class="key-insight">
+      <p class="key-insight-label">Key Insight</p>
+      <p class="key-insight-text">"The most successful outcome will be a tool that experienced bankers recognize as 'how I already think about this but automated' — rather than a new system they must learn. The design should codify institutional knowledge, not replace it."</p>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Research Approach</p>
+    <h2 class="section-title">Seven bankers, four research objectives</h2>
+    <p class="body-text">Seven in-depth interviews were conducted with SIG coverage bankers to gather requirements for the Investor Profile experience in DASH. Sessions ranged from 30 to 90 minutes, with participants encouraged to share their screens, demonstrate current workflows, and provide candid feedback on pain points and desired functionality — making the research highly observational as well as attitudinal.</p>
+    <p class="body-text" style="margin-top:1rem;">The participant mix was deliberately broad — spanning seniority levels from new joiners to 12+ year veterans, geographic markets from New York to London, and coverage specialisms from large PE sponsors to sovereign wealth funds and growth VCs.</p>
+
+    <div class="participants-grid">
+      <div class="participant">
+        <div class="participant-id">AS</div>
+        <div class="participant-region">North America</div>
+        <div class="participant-focus">Large PE sponsors: Apollo, American Securities, Warburg</div>
+        <div class="participant-tenure">Senior</div>
+      </div>
+      <div class="participant">
+        <div class="participant-id">FF</div>
+        <div class="participant-region">North America</div>
+        <div class="participant-focus">Large PE sponsors: EQT, Premira, Blackstone</div>
+        <div class="participant-tenure">Senior</div>
+      </div>
+      <div class="participant">
+        <div class="participant-id">IT</div>
+        <div class="participant-region">EMEA</div>
+        <div class="participant-focus">PE sponsors across European markets</div>
+        <div class="participant-tenure">Senior</div>
+      </div>
+      <div class="participant">
+        <div class="participant-id">JS</div>
+        <div class="participant-region">North America</div>
+        <div class="participant-focus">Large PE sponsors: KKR</div>
+        <div class="participant-tenure">New (joined 2023/24)</div>
+      </div>
+      <div class="participant">
+        <div class="participant-id">MR</div>
+        <div class="participant-region">EMEA</div>
+        <div class="participant-focus">Sovereign Wealth Funds: GIC, CPP, ADIA</div>
+        <div class="participant-tenure">Senior</div>
+      </div>
+      <div class="participant">
+        <div class="participant-id">SB</div>
+        <div class="participant-region">North America / EMEA</div>
+        <div class="participant-focus">Growth equity, late-stage VCs: General Catalyst, Index Ventures, SoftBank</div>
+        <div class="participant-tenure">New</div>
+      </div>
+      <div class="participant" style="grid-column: 1 / -1; max-width: 220px;">
+        <div class="participant-id">KB</div>
+        <div class="participant-region">North America</div>
+        <div class="participant-focus">Tech PE sponsors: Thoma Bravo, Vista, Silver Lake</div>
+        <div class="participant-tenure">12+ years</div>
+      </div>
+    </div>
+
+    <p class="body-text">Four research objectives anchored every session: identify key SIG process pain points, finalize required data fields for initial launch, align on functional needs (filters, visualizations), and validate the page layout and information hierarchy of proposed widgets.</p>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Jobs to Be Done</p>
+    <h2 class="section-title">Five things bankers actually need to do</h2>
+    <p class="body-text">The research organized findings around five core jobs — the real tasks bankers were trying to accomplish, regardless of what tool they were using. Each job had a current-state problem and a clear design implication for the Investor Profile.</p>
+
+    <div class="jtbd-map">
+      <div class="jtbd-item">
+        <div class="jtbd-left">
+          <p class="jtbd-job">Prepare for a sponsor interaction quickly</p>
+          <p class="jtbd-capability">→ Summary-first dashboard, scannable in 30 seconds</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Bankers maintain multiple open screens and manual trackers to piece together a picture before every client interaction. There is no single view that gives them full context — who covers the account, recent conversations, where the firm has exposure, what opportunities or risks exist.</p>
+          <p class="jtbd-quote">"I keep a bunch of screens open now that I think is what you're kind of uniting... I have DASH open, my contacts I have starred are all open."
+            <span class="jtbd-attr">— AS</span>
+          </p>
+          <p class="jtbd-quote">"I was literally on the phone with the head of American Securities. We're just catching up. And I can't pull up a view quickly. It'd be great if I had a dashboard and say, 'Hey, let me just give you the interaction we're doing across American Securities.'"
+            <span class="jtbd-attr">— AS</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="jtbd-item">
+        <div class="jtbd-left">
+          <p class="jtbd-job">Identify where to spend my time</p>
+          <p class="jtbd-capability">→ Unified asset list, KDM favorites, fund pressure indicators</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Bankers manually maintain favorites lists, scrolling through contacts to identify who needs attention. Portfolio companies and exit opportunities are tracked in separate systems with no cross-referencing. There's no system that surfaces what matters most right now.</p>
+          <p class="jtbd-quote">"You don't cover the key exit, you don't cover the company. You cover the person who controls it. So if you're covering the person, adding value to the person, and they own a company that's in your space, that's going to elevate your profile with that person."
+            <span class="jtbd-attr">— JS</span>
+          </p>
+          <p class="jtbd-quote">"It is important knowing which portfolio companies are in which funds... We think about, is that a long-in-the-tooth fund? Do we need to CV this thing? Is that the last asset in the fund?"
+            <span class="jtbd-attr">— AS</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="jtbd-item">
+        <div class="jtbd-left">
+          <p class="jtbd-job">Coordinate internally across JPM</p>
+          <p class="jtbd-capability">→ Three-tier coverage widget, "My Partners" shortcut, two-way visibility</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Coverage lists in DASH are overwhelming — 50+ names with no indication of relationship depth. Cross-LOB visibility is nonexistent. Bankers make multiple calls to find the right person, and cross-LOB partners flood inboxes with questions that could be self-served.</p>
+          <p class="jtbd-quote">"When you go on DASH, oftentimes there's a very long list of people — 60 people. If it's somebody who did one phone call and is now somehow in that list, that's not helpful because currently the depth and responsibility of that relationship is in no way dimensionalized."
+            <span class="jtbd-attr">— JS</span>
+          </p>
+          <p class="jtbd-quote">"If they could go in and just see the answer to that and what the activity has been because they cover that company, it would take that off my plate. I could just say, 'Look at this tool — it has all the information we need. Please never call me again unless you have a very specific question.'"
+            <span class="jtbd-attr">— JS</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="jtbd-item">
+        <div class="jtbd-left">
+          <p class="jtbd-job">Understand our business position with the client</p>
+          <p class="jtbd-capability">→ Balance of trade: ROE → Exposure → Fees, wallet share with ranking</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Financial data is scattered across multiple systems and reports. Bankers request data from business managers, wait for manual pulls, and piece together narratives from disconnected sources. Wallet share requires separate Deal Logic lookups and lacks competitive context.</p>
+          <p class="jtbd-quote">"If we're #3 but ideas generated are 50, and I'm #3 and Goldman only sold you 2 businesses — I'm kind of like, WTF? So I use those financial metrics as more of a balance of trade."
+            <span class="jtbd-attr">— KB</span>
+          </p>
+          <p class="jtbd-quote">"I want to be able to trust what's in there. I still can't and I still don't. Before we find a way to do that, all the rest is useless."
+            <span class="jtbd-attr">— IT</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="jtbd-item">
+        <div class="jtbd-left">
+          <p class="jtbd-job">Spot opportunity and loss signals</p>
+          <p class="jtbd-capability">→ Dry spell alerts, wallet decline trends, cross-sell gaps, incumbency data</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Signal detection is entirely manual. Bankers rely on memory, scrolling through contact lists, and ad hoc data pulls to identify where attention is needed. There are no proactive alerts or pattern recognition — the system waits for the banker to go looking.</p>
+          <p class="jtbd-quote">"If there was a way to have the system identify: our win on this company sell-side — this looks like these other companies in your client's portfolios — and get that to pop up somewhere... We have invaluable information that nobody else has around how we got this deal done for a very comparable company to yours. That would be the Holy Grail."
+            <span class="jtbd-attr">— JS</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="viz-wrap">
+  <p class="viz-label">Investor Profile — DASH Concept Mockup</p>
+  <div style="border:1px solid var(--rule); border-radius:10px; overflow:hidden;">
+    <!-- DASH top bar -->
+    <div style="background:var(--navy); padding:0.55rem 1rem; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:0.75rem; font-weight:500; color:white; letter-spacing:0.04em;">DASH</div>
+        <div style="font-size:0.65rem; color:rgba(255,255,255,0.4);">Sponsor Coverage · Investor Profile</div>
+      </div>
+      <div style="font-size:0.65rem; color:var(--accent); font-weight:500;">Peak Rock Capital</div>
+    </div>
+    <!-- Coverage & summary bar -->
+    <div style="background:var(--navy-pale); padding:0.6rem 1rem; border-bottom:1px solid var(--rule); display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+      <div>
+        <div style="font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:2px;">Coverage Lead</div>
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">John Ross</div>
+      </div>
+      <div>
+        <div style="font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:2px;">IB Coverage</div>
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">Kate Brady</div>
+      </div>
+      <div>
+        <div style="font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:2px;">Last Interaction</div>
+        <div style="font-size:0.78rem; font-weight:500; color:var(--navy);">3 days ago</div>
+      </div>
+      <div style="margin-left:auto;">
+        <span style="font-size:0.65rem; background:var(--navy); color:white; padding:3px 10px; border-radius:3px; font-weight:500;">Update Sponsor Info</span>
+      </div>
+    </div>
+    <!-- Main content grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; background:var(--white);">
+      <!-- Left col -->
+      <div style="padding:1rem; border-right:1px solid var(--rule);">
+        <!-- Key metrics -->
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.5rem; margin-bottom:1rem;">
+          <div style="background:var(--navy-pale); border-radius:6px; padding:0.6rem 0.5rem; text-align:center;">
+            <div style="font-family:var(--serif); font-size:1rem; color:var(--navy);">$6.2bn</div>
+            <div style="font-size:0.58rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;">AUM</div>
+          </div>
+          <div style="background:var(--navy-pale); border-radius:6px; padding:0.6rem 0.5rem; text-align:center;">
+            <div style="font-family:var(--serif); font-size:1rem; color:var(--navy);">$3.8bn</div>
+            <div style="font-size:0.58rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;">Dry Powder</div>
+          </div>
+          <div style="background:var(--navy-pale); border-radius:6px; padding:0.6rem 0.5rem; text-align:center;">
+            <div style="font-family:var(--serif); font-size:1rem; color:var(--navy);">7</div>
+            <div style="font-size:0.58rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;">Funds</div>
+          </div>
+          <div style="background:var(--navy-pale); border-radius:6px; padding:0.6rem 0.5rem; text-align:center;">
+            <div style="font-family:var(--serif); font-size:1rem; color:var(--navy);">21</div>
+            <div style="font-size:0.58rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;">Portcos</div>
+          </div>
+        </div>
+        <!-- Balance of trade -->
+        <div style="margin-bottom:1rem;">
+          <div style="font-size:0.68rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Balance of Trade</div>
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <div style="flex:1;">
+              <div style="font-size:0.65rem; color:var(--ink-faint); margin-bottom:3px;">JPM Fees</div>
+              <div style="height:8px; background:#E1F5EE; border-radius:4px; overflow:hidden;">
+                <div style="width:68%; height:100%; background:#1D9E75; border-radius:4px;"></div>
+              </div>
+              <div style="font-size:0.7rem; font-weight:500; color:var(--navy); margin-top:3px;">$60mm</div>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.65rem; color:var(--ink-faint); margin-bottom:3px;">Credit Exposure</div>
+              <div style="height:8px; background:var(--navy-light); border-radius:4px; overflow:hidden;">
+                <div style="width:40%; height:100%; background:var(--navy); border-radius:4px;"></div>
+              </div>
+              <div style="font-size:0.7rem; font-weight:500; color:var(--navy); margin-top:3px;">$35mm</div>
+            </div>
+          </div>
+        </div>
+        <!-- Wallet share -->
+        <div>
+          <div style="font-size:0.68rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Wallet Share — M&A (L36)</div>
+          <div style="display:flex; flex-direction:column; gap:4px;">
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <div style="font-size:0.65rem; color:var(--navy); font-weight:500; width:80px;">JPMorgan #2</div>
+              <div style="flex:1; height:6px; background:var(--navy-light); border-radius:3px; overflow:hidden;"><div style="width:72%; height:100%; background:var(--navy); border-radius:3px;"></div></div>
+              <div style="font-size:0.65rem; color:var(--navy); font-weight:500;">22%</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <div style="font-size:0.65rem; color:var(--ink-soft); width:80px;">Goldman #1</div>
+              <div style="flex:1; height:6px; background:var(--navy-light); border-radius:3px; overflow:hidden;"><div style="width:100%; height:100%; background:var(--ink-faint); border-radius:3px;"></div></div>
+              <div style="font-size:0.65rem; color:var(--ink-soft);">31%</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <div style="font-size:0.65rem; color:var(--ink-soft); width:80px;">MS #3</div>
+              <div style="flex:1; height:6px; background:var(--navy-light); border-radius:3px; overflow:hidden;"><div style="width:55%; height:100%; background:var(--ink-faint); border-radius:3px; opacity:0.6;"></div></div>
+              <div style="font-size:0.65rem; color:var(--ink-soft);">17%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right col -->
+      <div style="padding:1rem;">
+        <!-- KDMs -->
+        <div style="margin-bottom:1rem;">
+          <div style="font-size:0.68rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Key Decision Makers</div>
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <div style="display:flex; align-items:center; gap:0.6rem; padding:0.4rem 0.5rem; background:var(--navy-pale); border-radius:5px;">
+              <div style="width:26px; height:26px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; font-size:0.6rem; color:white; font-weight:500; flex-shrink:0;">JR</div>
+              <div style="flex:1;">
+                <div style="font-size:0.72rem; font-weight:500; color:var(--navy);">James Reynolds</div>
+                <div style="font-size:0.62rem; color:var(--ink-faint);">Managing Partner</div>
+              </div>
+              <div style="font-size:0.6rem; color:#1D9E75; font-weight:500;">● 4d ago</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.6rem; padding:0.4rem 0.5rem; background:var(--navy-pale); border-radius:5px;">
+              <div style="width:26px; height:26px; border-radius:50%; background:var(--navy-mid); display:flex; align-items:center; justify-content:center; font-size:0.6rem; color:white; font-weight:500; flex-shrink:0;">SC</div>
+              <div style="flex:1;">
+                <div style="font-size:0.72rem; font-weight:500; color:var(--navy);">Sarah Chen</div>
+                <div style="font-size:0.62rem; color:var(--ink-faint);">Partner, Healthcare</div>
+              </div>
+              <div style="font-size:0.6rem; color:#EF9F27; font-weight:500;">● 32d ago</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.6rem; padding:0.4rem 0.5rem; background:var(--navy-pale); border-radius:5px;">
+              <div style="width:26px; height:26px; border-radius:50%; background:#7F77DD; display:flex; align-items:center; justify-content:center; font-size:0.6rem; color:white; font-weight:500; flex-shrink:0;">MK</div>
+              <div style="flex:1;">
+                <div style="font-size:0.72rem; font-weight:500; color:var(--navy);">Michael Kim</div>
+                <div style="font-size:0.62rem; color:var(--ink-faint);">Principal</div>
+              </div>
+              <div style="font-size:0.6rem; color:#E24B4A; font-weight:500;">● 91d ago ⚠</div>
+            </div>
+          </div>
+        </div>
+        <!-- My Partners -->
+        <div>
+          <div style="font-size:0.68rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">My Partners</div>
+          <div style="display:flex; flex-direction:column; gap:4px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:0.35rem 0.5rem; border:1px solid var(--rule); border-radius:4px; background:var(--white);">
+              <span style="font-size:0.7rem; color:var(--ink-soft);">Private Bank</span>
+              <span style="font-size:0.7rem; font-weight:500; color:var(--navy);">David Park ✉</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:0.35rem 0.5rem; border:1px solid var(--rule); border-radius:4px; background:var(--white);">
+              <span style="font-size:0.7rem; color:var(--ink-soft);">Treasury</span>
+              <span style="font-size:0.7rem; font-weight:500; color:var(--navy);">Lisa Wong ✉</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:0.35rem 0.5rem; border:1px solid var(--rule); border-radius:4px; background:var(--white);">
+              <span style="font-size:0.7rem; color:var(--ink-soft);">Credit Risk</span>
+              <span style="font-size:0.7rem; font-weight:500; color:var(--navy);">Tom Reid ✉</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:0.72rem; color:var(--ink-faint); margin-top:0.5rem;">Concept mockup of the Investor Profile in DASH — illustrating the summary-first, pre-meeting snapshot validated through research sessions.</p>
+</div>
+
+
+  <div class="section reveal">
+    <p class="section-label">Current State vs. Target State</p>
+    <h2 class="section-title">What bankers ask — and what the profile should answer</h2>
+    <p class="body-text">For each question a banker needs answered before a client interaction, the research mapped the current workaround against the target state the Investor Profile should deliver.</p>
+
+    <div class="current-vs-target">
+      <div class="cvt-header">
+        <div class="cvt-col-head">Question</div>
+        <div class="cvt-col-head">Current state</div>
+        <div class="cvt-col-head">Target state</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Who covers this client?</div>
+        <div class="cvt-cell cvt-current">Search DASH, call colleagues</div>
+        <div class="cvt-cell cvt-target">Primary coverage widget (5–10 names)</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">What's our financial position?</div>
+        <div class="cvt-cell cvt-current">Request from business manager</div>
+        <div class="cvt-cell cvt-target">Summary: ROE → Exposure → Fees</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Who's met with them recently?</div>
+        <div class="cvt-cell cvt-current">Ask around, check email</div>
+        <div class="cvt-cell cvt-target">Firm-wide interaction timeline</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">What are the priority opportunities?</div>
+        <div class="cvt-cell cvt-current">Check Opportunity Tracker separately</div>
+        <div class="cvt-cell cvt-target">Unified asset list with priority filters</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Which KDMs need attention?</div>
+        <div class="cvt-cell cvt-current">Scroll starred contacts manually</div>
+        <div class="cvt-cell cvt-target">Dry spell indicators on priority contacts</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Where do we rank vs. competitors?</div>
+        <div class="cvt-cell cvt-current">Separate Deal Logic lookup</div>
+        <div class="cvt-cell cvt-target">Wallet share league table with trend line</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Who's the right PB/CDM contact?</div>
+        <div class="cvt-cell cvt-current">Call or email to find out</div>
+        <div class="cvt-cell cvt-target">"My Partners" section by line of business</div>
+      </div>
+      <div class="cvt-row">
+        <div class="cvt-cell cvt-question">Which funds have exit pressure?</div>
+        <div class="cvt-cell cvt-current">Personal knowledge, separate systems</div>
+        <div class="cvt-cell cvt-target">Fund vintage + remaining assets indicator</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Opportunity & Loss Signals</p>
+    <h2 class="section-title">Six signals the profile should surface proactively</h2>
+    <p class="body-text">A core finding was that signal detection was entirely manual — bankers had no system that told them when something had changed or when action was needed. The research defined six signal types the Investor Profile should detect and surface automatically.</p>
+
+    <table class="signal-table">
+      <thead>
+        <tr>
+          <th>Signal</th>
+          <th>Real example</th>
+          <th>How the profile helps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="signal-name">Dry Spell</span></td>
+          <td class="signal-example">No one has met with a key partner in 90 days</td>
+          <td class="signal-solution">KDM table with firm-wide dry spell indicators</td>
+        </tr>
+        <tr>
+          <td><span class="signal-name">Wallet Decline</span></td>
+          <td class="signal-example">JPM dropped from #3 to #7 in M&A</td>
+          <td class="signal-solution">Wallet share trend line with ranking alerts</td>
+        </tr>
+        <tr>
+          <td><span class="signal-name">Coverage Gap</span></td>
+          <td class="signal-example">High-value portco with no IB relationship</td>
+          <td class="signal-solution">Product penetration matrix (yes/no by product)</td>
+        </tr>
+        <tr>
+          <td><span class="signal-name">Competitor Win</span></td>
+          <td class="signal-example">Goldman won a sell-side we weren't invited to</td>
+          <td class="signal-solution">Deals done away tracking with context</td>
+        </tr>
+        <tr>
+          <td><span class="signal-name">Exit Opportunity</span></td>
+          <td class="signal-example">Fund is aging, last 2 assets remaining</td>
+          <td class="signal-solution">Fund vintage + remaining assets indicator</td>
+        </tr>
+        <tr>
+          <td><span class="signal-name">Cross-Sell Gap</span></td>
+          <td class="signal-example">CB has operating relationship, IB has none</td>
+          <td class="signal-solution">IB ↔ CB mismatch identification</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Design Direction</p>
+    <h2 class="section-title">Three principles that shaped the solution</h2>
+    <p class="body-text">The research didn't just surface problems — it generated clear, banker-validated design principles that the Investor Profile mockup was built around.</p>
+
+    <div class="jtbd-map" style="margin-top:1.5rem;">
+      <div class="jtbd-item">
+        <div class="jtbd-left" style="background: var(--navy-pale);">
+          <p class="jtbd-job" style="color: var(--navy);">Summary-centric information display</p>
+          <p class="jtbd-capability" style="color: var(--ink-soft);">Scannable overview with drill-down on demand</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">SIG bankers prefer concise overviews with the option to dive deeper — supporting efficient decision-making rather than passive data browsing. The landing view should be scannable in 30 seconds before a call, with financial metrics, recent interactions, and coverage contacts all visible without scrolling.</p>
+        </div>
+      </div>
+      <div class="jtbd-item">
+        <div class="jtbd-left" style="background: var(--navy-pale);">
+          <p class="jtbd-job" style="color: var(--navy);">Efficient meeting preparation</p>
+          <p class="jtbd-capability" style="color: var(--ink-soft);">Purpose-built for prep, not passive browsing</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">The primary use case is preparing for meetings and targeted follow-ups — not exploratory data browsing. Every widget should answer a question a banker has right before they walk into a room. Drill-down should be available but never required for basic meeting prep.</p>
+        </div>
+      </div>
+      <div class="jtbd-item">
+        <div class="jtbd-left" style="background: var(--navy-pale);">
+          <p class="jtbd-job" style="color: var(--navy);">Integrated and trusted workflows</p>
+          <p class="jtbd-capability" style="color: var(--ink-soft);">Unified data with transparent sourcing</p>
+        </div>
+        <div class="jtbd-right">
+          <p class="jtbd-problem">Unified, integrated workflows are strongly preferred over isolated widgets. Trust in data quality is the foundational prerequisite — bankers will not adopt a tool they can't rely on. Source indicators and "last updated" timestamps are not nice-to-haves; they are the trust mechanism that makes everything else usable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <p class="section-label">Impact</p>
+    <h2 class="section-title">From discovery research to product requirements</h2>
+    <p class="body-text">The research moved directly from findings to validated design direction — with the Investor Profile mockup built and iterated on in parallel with the research sessions. By the end of the study, the product team had banker-validated requirements, a prioritized data field list, and a clear understanding of which capabilities to build for launch versus which to defer to the roadmap.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <p class="impact-card-label">Product Requirements</p>
+        <p class="impact-card-text">Research findings translated directly into data field requirements and feature prioritization for DASH's Investor Profile initial launch</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Global Scope</p>
+        <p class="impact-card-text">North America and EMEA participants surfaced regional differences in coverage complexity — informing a globally-viable product design rather than a US-only solution</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Validated Mockups</p>
+        <p class="impact-card-text">Investor Profile mockups were stress-tested against banker mental models in real sessions — ensuring the design codified institutional knowledge rather than imposing a new framework</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">JTBD Framework</p>
+        <p class="impact-card-text">The five-job framework became a shared language between research, design, and product — anchoring roadmap conversations in user needs rather than feature lists</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Cross-Sell Strategy</p>
+        <p class="impact-card-text">Surfaced the CB ↔ IB coordination gap as a significant untapped opportunity — with design implications for cross-LOB visibility that extended beyond the original research brief</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-card-label">Trust as a Design Constraint</p>
+        <p class="impact-card-text">Established data trust as the primary adoption barrier — redirecting product investment toward data quality and transparency as a prerequisite for everything else</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+  <div>
+    <p class="bnav-label">← Previous</p>
+    <a href="ecm-case-study.html" class="bnav-link">Mapping the IPO Journey</a>
+  </div>
+  <div style="text-align: right;">
+    <p class="bnav-label">← Back</p>
+    <a href="tim_yoo_portfolio.html" class="bnav-link">All work</a>
+  </div>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
